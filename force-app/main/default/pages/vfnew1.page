@@ -1,0 +1,26 @@
+<apex:page controller="AggController" >
+  <apex:form >
+    <apex:pageBlock >
+      <apex:pageBlockSection >
+        <apex:outputText label="Num1">  
+        <apex:inputText value="{!Num1}"/>
+        </apex:outputText>
+        
+        <apex:outputText Label="Num2">
+        <apex:inputText value="{!Num2}" />
+        </apex:outputText>
+         
+         
+         <apex:outputText label="Result" value="{!Result}"/>
+         
+               
+      </apex:pageBlockSection>
+    <apex:pageBlockButtons >
+        <apex:commandButton value="add" action="{!add}"/>
+        <apex:commandButton value="multiply" action="{!multiply}"/>
+        <apex:commandButton value="div" action="{!div}"/>
+        <apex:commandButton value="exp" action="{!exp}"/>
+    </apex:pageBlockButtons>
+  </apex:pageBlock>
+ </apex:form>
+</apex:page>

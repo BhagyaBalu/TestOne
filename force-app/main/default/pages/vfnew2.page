@@ -1,0 +1,15 @@
+<apex:page controller="contactlist">
+   <apex:form >
+  <apex:pageBlock >
+   <apex:pageBlockTable value="{!contactlist}" var="con"> 
+     <apex:column value="{!con.id}"/>
+     <apex:column value="{!con.firstname}"/>
+     <apex:column value="{!con.lastname}"/>
+ </apex:pageBlockTable>
+  
+   
+      <apex:commandButton value="click me" action="{!click}"/>  
+     
+  </apex:pageBlock>
+ </apex:form>
+</apex:page>

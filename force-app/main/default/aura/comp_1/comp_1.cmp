@@ -1,0 +1,19 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <H1>SFDC calculator</H1><br/>
+    <aura:attribute type="Integer" name="num1" />
+    <aura:attribute type="Integer" name="num2" />
+    <aura:attribute type="Integer" name="num3" />
+    Enter 1st value<ui:inputNumber value="{!v.num1}"></ui:inputNumber><br/>
+    Enter 2nd value<ui:inputNumber value="{!v.num2}"></ui:inputNumber><br/>
+    <lightning:buttonGroup>
+        <lightning:button label="Add" onclick="{!c.handleClick}"/>
+        <lightning:button label="Substract" onclick="{!c.handleClick}"/>
+        <lightning:button label="Multiply" onclick="{!c.handleClick}"/>
+       	<lightning:button label="Divide" onclick="{!c.handleClick}"/>
+        <lightning:button label="Clear" onclick="{!c.handleClick}"/>
+        <!-- <ui:button label="Add" press="{!c.handleClick}"/> -->
+        <!-- <lightning:button  class="slds-button slds-button_text-destructive" label="Reset" onclick="{!c.resetForm}"/>
+        <lightning-button variant="Neutral" label="Cancel" type="reset" /> -->
+    </lightning:buttonGroup> <br/>
+    The Result  is <ui:outputNumber value="{!v.num3}"></ui:outputNumber>
+</aura:component>

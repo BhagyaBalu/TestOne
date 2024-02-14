@@ -1,0 +1,5 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<p class="red">Hello!!</p>
+    <!-- Calling one component from another component -->
+    <c:comp_1/>
+</aura:component>

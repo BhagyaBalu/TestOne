@@ -1,0 +1,64 @@
+<aura:component controller="createRecordController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader" access="global" >
+	 <!-- attributes to capture account fields -->
+  <aura:attribute name="name" type="String"/>
+  <aura:attribute name="type" type="String"/>
+  <aura:attribute name="annualRevenue" type="Currency"/>
+    
+ <!-- Picklist options attribute -->
+  <aura:attribute name="options" 
+                  type="list" 
+      default="[
+                {'label': 'Prospect', 'value': 'Prospect'},
+                {'label': 'Customer - Direct', 'value': 'Customer - Direct'},
+                {'label': 'Customer - Channel', 'value': 'Customer - Channel'},
+                {'label': 'Channel Partner / Reseller', 'value': 'Channel Partner / Reseller'},
+                {'label': 'Installation Partner', 'value': 'Installation Partner'},
+                {'label': 'Technology Partner', 'value': 'Technology Partner'},
+                {'label': 'Other', 'value': 'Other'}                               ]" 
+  description="Below attribute will define picklist values if you want dynamic values then you can query that from the database and set those values"/>
+    
+  <center>
+      <h1 class="inlineTitle slds-p-top--large slds-p-horizontal--medium slds-p-bottom--medium slds-text-heading--medium" 
+            style="font-size:20px">
+            Custom Create Account
+            <hr size="3" noshade=""></hr>
+      </h1>
+  </center>
+    
+   <h2 class="slds-section__title slds-theme--shade primaryPaletteBorder test-id__section-header-container"> 
+        New Account Information
+   </h2>
+    
+    <div class="slds-p-around_medium">
+        <lightning:input name="Name" 
+                         required="true" 
+                         value="{!v.name}" 
+                         label="Name" 
+                         maxlength="255"/>
+        
+        <lightning:combobox name="Status" 
+                            label="Status" 
+                            value="inProgress" 
+                            placeholder="Select Progress" 
+                            options="{!v.options}" 
+                            onchange="{!c.handleChange}"/>
+        
+        <lightning:input type="number" 
+                         name="Annual Revenue"
+                         label="Annual Revenue" 
+                         value="{!v.annualRevenue}" 
+                         formatter="currency"
+                         fieldLevelHelp="Please enter in numbers"/>
+        
+    </div> 
+    <center>
+        <lightning:button variant="Brand" 
+                          label="Save" 
+                          title="Save" 
+                          onclick="{!c.save}"/>
+        <lightning:button variant="Neutral" 
+                          label="Cancel" 
+                          title="Cancel" 
+                          onclick="{!c.cancel}"/>
+    </center>
+</aura:component>

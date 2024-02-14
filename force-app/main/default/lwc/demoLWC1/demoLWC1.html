@@ -1,0 +1,22 @@
+<template>
+    <template if:true={record.data}>
+    <div>
+        <div> Name : {name}</div>
+        <div> Designation : {designation}</div>
+        <lightning-badge label={designation}></lightning-badge>
+        <div> Company : {company}</div>
+        <div> Salary : {salary}</div>
+        <div> Record Id : {recordId}</div>
+        <div class="slds-grid">
+            <div class="slds-col slds-size_1-of-2"> 
+                <lightning-formatted-text value={name} class="slds-text-heading_large">
+                </lightning-formatted-text>
+            </div>
+            <div class="slds-col slds-size_2-of-2"> 
+                <lightning-formatted-text value={phone} class="slds-text-heading_large">
+                </lightning-formatted-text>
+            </div>
+        </div>
+    </div>
+</template>
+</template>

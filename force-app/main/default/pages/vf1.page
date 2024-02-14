@@ -1,0 +1,29 @@
+<apex:page standardController="position__c">
+  <apex:form >
+    <apex:pageBlock >
+     <apex:pageBlockSection >
+       <apex:outputText > Enter Name</apex:outputText>
+       <apex:inputText />
+       <apex:inputField value="{!position__c.name}"/>
+     <apex:pageBlockSectionItem >
+       <apex:outputText > Enter Name</apex:outputText>
+       <apex:inputText />
+     </apex:pageBlockSectionItem>
+     <apex:pageBlockSectionItem >
+       <apex:outputText > Enter Name</apex:outputText>
+       <apex:inputText />
+     </apex:pageBlockSectionItem>
+     <apex:pageBlockSectionItem >
+       <apex:outputText > Enter Name</apex:outputText>
+       <apex:inputText />
+     </apex:pageBlockSectionItem>
+     <apex:pageBlockSectionItem >
+       <apex:outputText > Enter Name</apex:outputText>
+       <apex:inputText />
+     </apex:pageBlockSectionItem>
+    </apex:pageBlockSection>
+
+
+   </apex:pageBlock>
+  </apex:form>
+</apex:page>
