@@ -8,6 +8,11 @@ on:
       - master
     paths:
       - 'force-app/**'
+  push:
+    branches:    
+      - main
+    paths:
+      - 'force-app/**'
       
 jobs:
   Explore-GitHub-Actions:
