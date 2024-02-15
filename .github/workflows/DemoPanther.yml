@@ -28,7 +28,7 @@ jobs:
       
   build:
     runs-on: ubuntu-latest
-    environment: production
+    environment: Production Dev Org
     steps:
       # Checkout the Source code from the latest commit
       - uses: actions/checkout@v3
