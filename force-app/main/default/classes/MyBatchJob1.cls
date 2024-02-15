@@ -17,6 +17,7 @@ public class MyBatchJob1 implements Database.Batchable<sObject>, Database.statef
             recordCount = recordCount + opps.size();
         }
     }
+    //Test SF Changes
     public void finish(Database.BatchableContext bc)
     {
         System.debug('Total records processed' + recordCount);
