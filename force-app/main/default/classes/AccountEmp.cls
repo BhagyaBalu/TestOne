@@ -8,7 +8,7 @@ public class AccountEmp {
             }
         }
     }
-    //Just for demo test 2
+    //Just for demo test 3
  /*   public static void UpdateLeftEmpCountOnAcc(List<Employee__c> empList){
      	Set<Id> accIds = new Set<Id>();
         List<Account> accToBeUpdated = new List<Account>();
