@@ -10,7 +10,7 @@ on:
       - 'force-app/**'
   push:
     branches:    
-      - main
+      - develop
     paths:
       - 'force-app/**'
       
