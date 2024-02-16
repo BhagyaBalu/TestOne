@@ -62,7 +62,7 @@ jobs:
           mkdir delta
           sfdx sgd:source:delta --to "HEAD" --from "HEAD~1" --output "."
           echo "--- package.xml generated with added and modified metadata ---"
-          cat delta/package/package.xml
+          cat package/package.xml
       
       - name: Deploy Delta components to Salesofrce
         run: |
