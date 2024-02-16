@@ -66,4 +66,4 @@ jobs:
       
       - name: Deploy Delta components to Salesofrce
         run: |
-          sfdx force:source:deploy -x delta/package/package.xml --postdestructivechanges destructiveChanges/destructiveChanges.xml
+          sfdx force:source:deploy -x delta/package/package.xml --postdestructivechanges destructiveChanges/destructiveChanges.xml -u ${{ secrets.HUB_USER_NAME }}
