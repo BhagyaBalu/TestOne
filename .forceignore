@@ -8,6 +8,8 @@ package.xml
 # GitHub workflows
 .github/
 
+destrutiveChanges/
+
 # LWC configuration files
 **/jsconfig.json
 **/.eslintrc.json
