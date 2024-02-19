@@ -5,8 +5,7 @@ on:
     types: [closed]
     branches:
       - Feature1
-    paths:
-      - 'force-app/**'
+
   push:
     branches:    
       - master
