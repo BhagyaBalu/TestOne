@@ -42,10 +42,10 @@ jobs:
       - name: Generate the package.xml for delta files
         run: |
           mkdir delta
-          sfdx sgd:source:delta --to develop --from Feature1 --source force-app/main/default --output delta/ -i .forceignore
+          sfdx sgd:source:delta --to "HEAD" --from "HEAD~1" --source force-app/main/default --output delta/ -i .forceignore
           echo "--- package.xml generated with added and modified metadata ---"
           cat package/package.xml
       
-      - name: Deploy Delta components to Salesofrce
+      - name: Deploy Delta components to Salesforce
         run: |
           sfdx force:source:deploy -x package/package.xml --postdestructivechanges destructiveChanges/destructiveChanges.xml -u ${{ secrets.HUB_USER_NAME }}
