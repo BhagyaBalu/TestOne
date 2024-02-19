@@ -8,11 +8,7 @@ public class AccountEmp {
             }
         }
     }
-    //Just for demo test 678903434ty
-    // For demo on Feb 19th 2024 11:30 AM
-     // For demo on Feb 19th 2024 12:25 AM
-     //For demo at 5:36 PM
-    //gishddihf
+
  /*   public static void UpdateLeftEmpCountOnAcc(List<Employee__c> empList){
      	Set<Id> accIds = new Set<Id>();
         List<Account> accToBeUpdated = new List<Account>();
