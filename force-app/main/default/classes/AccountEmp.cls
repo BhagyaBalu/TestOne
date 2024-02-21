@@ -8,6 +8,7 @@ public class AccountEmp {
             }
         }
     }
+    //Deletions test 1
 
  /*   public static void UpdateLeftEmpCountOnAcc(List<Employee__c> empList){
      	Set<Id> accIds = new Set<Id>();
