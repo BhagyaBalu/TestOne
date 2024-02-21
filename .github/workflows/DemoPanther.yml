@@ -48,4 +48,4 @@ jobs:
       
       - name: Deploy Delta components to Salesforce
         run: |
-          sfdx force:source:deploy -x package/package.xml RunSpecifiedTests -r ${{ secrets.APEX_CLASSES }} --postdestructivechanges destructiveChanges/destructiveChanges.xml -u ${{ secrets.HUB_USER_NAME }}
+          sfdx force:source:deploy -x package/package.xml --testlevel RunSpecifiedTests --runtests ${{ secrets.APEX_CLASSES }} --postdestructivechanges destructiveChanges/destructiveChanges.xml -u ${{ secrets.HUB_USER_NAME }}
